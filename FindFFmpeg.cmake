@@ -19,7 +19,8 @@
 #   - SWSCALE
 # the following variables will be defined
 #  <component>_FOUND        - System has <component>
-#  <component>_INCLUDE_DIRS - Include directory necessary for using the <component> headers
+#  <component>_INCLUDE_DIRS - Include directory necessary for using the
+#                             <component> headers
 #  <component>_LIBRARIES    - Link these to use <component>
 #  <component>_DEFINITIONS  - Compiler switches required for using <component>
 #  <component>_VERSION      - The components version
@@ -33,7 +34,8 @@
 
 include(FindPackageHandleStandardArgs)
 
-# The default components were taken from a survey over other FindFFMPEG.cmake files
+# The default components were taken from a survey over other FindFFMPEG.cmake
+# files
 if (NOT FFmpeg_FIND_COMPONENTS)
   set(FFmpeg_FIND_COMPONENTS AVCODEC AVFORMAT AVUTIL)
 endif ()
@@ -41,7 +43,8 @@ endif ()
 #
 ### Macro: set_component_found
 #
-# Marks the given component as found if both *_LIBRARIES AND *_INCLUDE_DIRS is present.
+# Marks the given component as found if both *_LIBRARIES AND *_INCLUDE_DIRS is
+# present.
 #
 macro(set_component_found _component )
   if (${_component}_LIBRARIES AND ${_component}_INCLUDE_DIRS)
@@ -55,7 +58,8 @@ endmacro()
 #
 ### Macro: find_component
 #
-# Checks for the given component by invoking pkgconfig and then looking up the libraries and
+# Checks for the given component by invoking pkgconfig and then looking up the
+# libraries and
 # include directories.
 #
 macro(find_component _component _pkgconfig _library _header)
@@ -127,7 +131,7 @@ if (NOT FFMPEG_LIBRARIES)
     list(REMOVE_DUPLICATES FFMPEG_INCLUDE_DIRS)
   endif ()
 
-  # cache the vars.
+  # Cache the vars.
   set(FFMPEG_INCLUDE_DIRS ${FFMPEG_INCLUDE_DIRS} CACHE STRING "The FFmpeg include directories." FORCE)
   set(FFMPEG_LIBRARIES    ${FFMPEG_LIBRARIES}    CACHE STRING "The FFmpeg libraries." FORCE)
   set(FFMPEG_DEFINITIONS  ${FFMPEG_DEFINITIONS}  CACHE STRING "The FFmpeg cflags." FORCE)
