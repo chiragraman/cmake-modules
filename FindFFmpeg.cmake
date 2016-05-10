@@ -1,4 +1,4 @@
-#
+
 # Try to find the required ffmpeg components(default: AVFORMAT, AVUTIL, AVCODEC)
 #
 # Once done this will define
