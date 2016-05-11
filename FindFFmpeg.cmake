@@ -59,8 +59,7 @@ endmacro()
 ### Macro: find_component
 #
 # Checks for the given component by invoking pkgconfig and then looking up the
-# libraries and
-# include directories.
+# libraries and include directories.
 #
 macro(find_component _component _pkgconfig _library _header)
 
