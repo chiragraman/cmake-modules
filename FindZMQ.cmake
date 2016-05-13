@@ -55,7 +55,7 @@ IF (NOT ZMQ_FOUND)
 	SET(ZMQ_DIR_MESSAGE "Required version of ZeroMQ was not found. Make sure the ZMQ_LIBRARY environment variable is set.")
 	MESSAGE(STATUS "${ZMQ_DIR_MESSAGE}")
         IF (ZMQ_FIND_REQUIRED)
-                MESSAGE(FATAL_ERROR "${ZMQ_DIR_MESSAGE}")
+            MESSAGE(FATAL_ERROR "${ZMQ_DIR_MESSAGE}")
         ENDIF (ZMQ_FIND_REQUIRED)
 ENDIF (NOT ZMQ_FOUND)
 
